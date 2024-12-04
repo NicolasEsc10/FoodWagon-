@@ -1,54 +1,35 @@
-# Astro Starter Kit: Basics
+# 🍔 FoodWagon - Plataforma de Delivery de Comida
 
-```sh
-npm create astro@latest -- --template basics
-```
+![FoodWagon-12-03-2024_09_23_PM](https://github.com/user-attachments/assets/64400638-e3ea-4ff5-9077-b0bada0cb260)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📝 Descripción
+FoodWagon es una moderna plataforma de delivery de comida desarrollada con tecnologías de última generación. Este proyecto presenta una interfaz elegante y responsive que permite a los usuarios explorar restaurantes, descubrir ofertas especiales y realizar pedidos de comida de manera intuitiva.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🚀 Características Principales
+- Carruseles interactivos de productos y ofertas
+- Sección de descuentos y promociones
+- Interfaz de usuario intuitiva y amigable
+- Animaciones fluidas y transiciones elegantes
 
-## 🚀 Project Structure
+## 🛠️ Tecnologías Utilizadas
 
-Inside of your Astro project, you'll see the following folders and files:
+### Frontend
+- **Astro** - Framework web para construcción de sitios rápidos
+- **React** - Biblioteca para componentes interactivos
+- **TypeScript** - Tipado estático para mayor robustez
+- **Tailwind CSS** - Framework CSS para estilos modernos
+- **Embla Carousel** - Para carruseles fluidos y responsivos
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Herramientas de Desarrollo
+- **ESLint** - Linting de código
+- **Prettier** - Formateo de código
+- **Sharp** - Optimización de imágenes
+- **Lucide Icons** - Iconografía moderna
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🎨 Diseño y UI/UX
+- Paleta de colores vibrante y moderna
+- Tipografía Source Sans 3 para mejor legibilidad
+- Diseño centrado en la experiencia de usuario
+- Animaciones y transiciones suaves
+- Componentes reutilizables y modulares
