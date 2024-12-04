@@ -1,0 +1,106 @@
+---
+import Arrow from "./ui/Arrow.astro";
+---
+
+<style>
+  #food-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+  }
+  #food-container::-webkit-scrollbar {
+    display: none; /* Para Chrome, Safari y Opera */
+  }
+  .food-item {
+    flex: 0 0 auto;
+    width: calc(100% / 6); /* Ajusta el ancho para mostrar 6 elementos */
+    scroll-snap-align: start;
+  }
+</style>
+
+<div class="flex flex-col bg-[#FEFAF1] px-4 sm:px-6 lg:px-5 xl:px-32 py-10 gap-16">
+    <div class="flex justify-between items-center">
+        <p class="text-3xl font-extrabold text-[#212121]">Search by Food</p>
+        <div class="flex items-center px-2 gap-3">
+            <button class="group flex items-center gap-3 text-[#FFB30E] hover:text-white px-5 py-2.5 rounded-md transition-all duration-200 ease-in-out border-2 border-transparent hover:bg-[#FFAE00]">
+                View All
+                <span class="fill-current text-[#FFB30E] group-hover:text-white transition-colors duration-300">
+                    <Arrow />
+                </span>
+            </button>
+            <button id="scroll-left" class="size-16 bg-[#FFB30E] rounded-full items-center justify-center flex hover:scale-105 shadow-[#FFAE00]/50 shadow-md hover:shadow-[#FFAE00]/90 transition-all duration-500 ease-in-out">
+                <span class="text-white">
+                    <Arrow direction="left" />
+                </span>
+            </button>
+            <button id="scroll-right" class="size-16 bg-[#FFB30E] rounded-full items-center justify-center flex hover:scale-105 shadow-[#FFAE00]/50 shadow-md hover:shadow-[#FFAE00]/90 transition-all duration-500 ease-in-out">
+                <span class="text-white">
+                    <Arrow direction="right" />
+                </span>
+            </button>
+        </div>
+    </div>
+    <div id="food-container" class="flex gap-5 justify-between items-center overflow-x-auto">
+        <div class="food-item flex flex-col items-center gap-4">
+            <img src="../../public/images/food/search-img-1.png" alt="pizza" class="size-40 rounded-full cursor-pointer">
+            <p class="text-[#424242] font-bold text-lg">Pizza</p>
+        </div>
+        <div class="food-item flex flex-col items-center gap-4">
+            <img src="../../public/images/food/search-img-2.png" alt="burger" class="size-40 rounded-full cursor-pointer">
+            <p class="text-[#424242] font-bold text-lg">Burger</p>
+        </div>
+        <div class="food-item flex flex-col items-center gap-4">
+            <img src="../../public/images/food/search-img-3.png" alt="noodles" class="size-40 rounded-full cursor-pointer">
+            <p class="text-[#424242] font-bold text-lg">Noodles</p>
+        </div>
+        <div class="food-item flex flex-col items-center gap-4">
+            <img src="../../public/images/food/search-img-4.png" alt="sub-sandwich" class="size-40 rounded-full cursor-pointer">
+            <p class="text-[#424242] font-bold text-lg">Sub-sandwich</p>
+        </div>
+        <div class="food-item flex flex-col items-center gap-4">
+            <img src="../../public/images/food/search-img-5.png" alt="chowmein" class="size-40 rounded-full cursor-pointer">
+            <p class="text-[#424242] font-bold text-lg">Chowmein</p>
+        </div>
+        <div class="food-item flex flex-col items-center gap-4">
+            <img src="../../public/images/food/search-img-6.png" alt="steak" class="size-40 rounded-full cursor-pointer">
+            <p class="text-[#424242] font-bold text-lg">Steak</p>
+        </div>
+        <div class="food-item flex flex-col items-center gap-4">
+            <img src="../../public/images/food/search-img-1.png" alt="pizza" class="size-40 rounded-full cursor-pointer">
+            <p class="text-[#424242] font-bold text-lg">Pizza</p>
+        </div>
+        <div class="food-item flex flex-col items-center gap-4">
+            <img src="../../public/images/food/search-img-2.png" alt="burger" class="size-40 rounded-full cursor-pointer">
+            <p class="text-[#424242] font-bold text-lg">Burger</p>
+        </div>
+        <div class="food-item flex flex-col items-center gap-4">
+            <img src="../../public/images/food/search-img-3.png" alt="noodles" class="size-40 rounded-full cursor-pointer">
+            <p class="text-[#424242] font-bold text-lg">Noodles</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollContainer = document.getElementById('food-container');
+        const scrollLeftBtn = document.getElementById('scroll-left');
+        const scrollRightBtn = document.getElementById('scroll-right');
+
+        if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
+            const foodItem = scrollContainer.querySelector('.food-item') as HTMLElement;
+            const foodItemWidth = foodItem?.offsetWidth || 0;
+
+            if (foodItemWidth) {
+                scrollLeftBtn.addEventListener('click', () => {
+                    scrollContainer.scrollBy({ left: -foodItemWidth, behavior: 'smooth' });
+                });
+
+                scrollRightBtn.addEventListener('click', () => {
+                    scrollContainer.scrollBy({ left: foodItemWidth, behavior: 'smooth' });
+                });
+            }
+        }
+    });
+</script>

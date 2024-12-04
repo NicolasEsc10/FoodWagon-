@@ -1,0 +1,95 @@
+---
+const cities = [
+    "San Francisco", "Los Angeles", "New York City", "Chicago", "Columbus", "Miami",
+    "Washington DC", "Orange County", "Phoenix", "New Mexico", "San Diego", "Seattle",
+    "Atlanta", "Las Vegas", "Albuquerque", "East Bay", "Portland", "Charlotte", "Sacramento", 
+    "Houston", "Long Beach", "Nashville", "Denver", "Oklahoma City", "New Orleans"
+];
+
+const company = ["About Us", "Team", "Careers", "Blog"];
+const contact = ["Help & Support", "Partner with us", "Ride with us"];
+const legal = ["Terms & Conditions", "Refund & Cancellation", "Privacy Policy", "Cookie Policy"];
+---
+
+<footer class="bg-[#212121] py-10 px-32">
+    <div class="max-w-7xl mx-auto ">
+        <h2 class="text-xl font-bold mb-8 text-white">Our Top Cities</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 text-start">
+            {cities.map(city => (
+                <p class="text-[#F5F5F5] font-light text-xs">{city}</p>
+            ))}
+        </div>
+    </div>
+
+    <!-- Separator -->
+    <div class="w-full h-[1px] rounded-full bg-[#424242] mt-20 mb-14"></div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 text-start">
+        <div>
+            <h3 class="text-lg font-bold text-white mb-6">Company</h3>
+            {company.map(item => (
+                <p class="text-[#F5F5F5] font-light text-xs pb-2">{item}</p>
+            ))}
+        </div>
+
+        <div>
+            <h3 class="text-lg font-bold text-white mb-6">Contact</h3>
+            {contact.map(item => (
+                <p class="text-[#F5F5F5] font-light text-xs pb-2">{item}</p>
+            ))}
+        </div>
+
+        <div>
+            <h3 class="text-lg font-bold text-white mb-6">Legal</h3>
+            {legal.map(item => (
+                <p class="text-[#F5F5F5] font-light text-xs pb-2">{item}</p>
+            ))}
+        </div>
+
+        <div></div>
+
+        <div class="flex flex-col w-[300px]">
+            <h3 class="text-md font-bold text-[#BBBBBB] mb-4">FOLLOW US</h3>
+            <div class="flex space-x-4 mb-6">
+                <a href="#" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BBBBBB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <a href="#" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BBBBBB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BBBBBB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                </a>
+            </div>
+
+            <form class="">
+                <p class="text-sm font-bold text-[#BBBBBB] mb-4">Receive exclusive offers in your mailbox</p>
+                <div class="flex gap-3">
+                    <input type="email" placeholder="Enter your email" class="flex-grow px-4 py-2 rounded-md bg-[#424242] text-[#ADADAD] border-none focus:ring-2 focus:ring-yellow-500 outline-none"/>
+                    <button class="text-sm font-bold flex justify-center items-center bg-gradient-to-br from-[#FFBA26] to-[#FF9A0E] text-white px-5 py-2.5 rounded-md transition-all duration-500 ease-in-out shadow-[#FFAE00]/50 shadow-lg hover:shadow-[#FFAE00]/70">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>        
+    </div>
+
+    <!-- Separator -->
+    <div class="w-full h-[1px] rounded-full bg-[#424242] mt-20 mb-4"></div>
+    
+    <div class="flex justify-between">
+        <div class="flex gap-3">
+            <p class="text-[#F5F5F5]/70 font-light text-sm ">All rights reserved</p>
+            <p class="text-white/70 text-sm ">&copy; FoodWagon, 2024</p>
+        </div>
+        <div class="flex gap-3">
+            <a href="https://www.figma.com/design/vl9oiEKavyRAOmscZi40kT/FoodWagon-Food-Delivery-Landing-Template-by-ThemeWagon-(Community)?node-id=401-1227&node-type=frame&t=9q3S1GcMxps1m2N1-0" class="text-white/50 text-sm font-light hover:text-white/80 transition duration-300">
+                Design: FoodWagon
+            </a>
+            <a href="https://github.com/NicolasEsc10" class="text-white/50 text-sm font-light hover:text-white/80 transition duration-300">
+                Programer: Nicolas Escobar
+            </a>
+        </div>
+        
+    </div>
+</footer>

@@ -1,0 +1,20 @@
+---
+// FoodCard.astro
+import { Image } from "astro:assets";
+import Arrow from "../ui/Arrow.astro";
+const { title, description, buttonText, image, alt, imagePosition = "right" } = Astro.props;
+const flexDirection = imagePosition === "left" ? "flex-row-reverse" : "flex-row";
+---
+
+<div class={`flex ${flexDirection} shadow-xl rounded-lg overflow-hidden max-w-[1100px]`}>
+    <div class="flex flex-col px-10 pt-16 gap-4">
+        <h2 class="font-extrabold text-4xl text-[#353535]">            
+            <span class="text-[#353535]">{title.first}</span> 
+            <span class="text-[#FFB30E]">{title.second}</span></h2>
+        <p class="text-[#9A9898]">{description}</p>
+        <button class="uppercase font-bold mt-10 group flex justify-center items-center gap-1 bg-gradient-to-br from-[#FFBA26] to-[#FF9A0E] text-white px-9 py-2.5 rounded-md hover:px-12 transition-all duration-500 ease-in-out shadow-[#FFAE00]/50 shadow-lg hover:shadow-[#FFAE00]/90">
+            {buttonText} <Arrow direction="right" class="size-3 group-hover:ml-2 transition-all duration-200 ease-out" />
+        </button>
+    </div>
+    <Image src={image} alt={alt} width="650" height="500" />
+</div>

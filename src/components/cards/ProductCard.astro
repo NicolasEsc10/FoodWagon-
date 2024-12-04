@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  imageSrc: string; // Propiedad requerida para la URL de la imagen
+  altText?: string; // Propiedad opcional para el texto alternativo de la imagen
+  title: string; // Propiedad opcional para el título
+  location: string;
+  price:number;
+  link?:string
+}
+
+const { imageSrc, altText = "Food image", title, location, price} = Astro.props as Props;
+
+const formattedPrice = price.toFixed(2);
+---
+
+
+<div class="flex flex-col gap-4 cursor-pointer">
+    <div class="relative max-w-[200px]">
+        <Image src={imageSrc} alt={altText} width="500" height="500" class="rounded-2xl shadow-lg" />
+    </div>
+    <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-1">
+            <p class="font-bold text-lg text-[#424242] ">{title}</p>
+            <div class="flex gap-1 items-center">
+                <img src="/images/icons/location-icon.svg" alt="location-icon" loading="lazy" class="size-4" />
+                <p class="text-base font-normal text-[#FFB30E] hover:text-[#ff820e]">{location}</p>
+            </div>
+            <p class="text-[#212121] font-bold">${formattedPrice}</p>
+        </div>
+        <div class="bg-[#F17228] text-white font-bold text-sm text-center transition-transform duration-200 rounded-lg py-3 shadow-orange hover:scale-105 hover:custom-shadow">Order Now</div>
+    </div>
+</div>
+
+<style>
+    .shadow-orange {
+        box-shadow: 0 4px 15px rgba(241, 114, 40, 0.719); 
+    }
+    .hover\:custom-shadow:hover {
+        box-shadow: 0 4px 15px rgb(241, 114, 40); 
+    }
+</style>

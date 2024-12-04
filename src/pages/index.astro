@@ -1,0 +1,29 @@
+---
+import "../styles/globals.css";
+import DeliveryFAQ from "../components/DeliveryFAQ.astro";
+import Hero from "../components/Hero.astro";
+import SearchFood from "../components/SearchFood.astro";
+import Features from "../components/ui/sections/Features.astro";
+import Layout from "../layouts/Layout.astro";
+import App from "../components/ui/sections/App.astro";
+import CTA from "../components/ui/sections/CTAList.astro";
+import {
+  DiscountCardList,
+  ProductCardList,
+  RestaurantCardList,
+} from "@/components/cards/CardsList.tsx";
+---
+
+<Layout title='FoodWagon'>
+  <main class='bg-white'>
+    <Hero />
+    <DiscountCardList client:load client:visible />
+    <DeliveryFAQ />
+    <ProductCardList client:load client:visible />
+    <RestaurantCardList />
+    <SearchFood />
+    <Features />
+    <App />
+    <CTA />
+  </main>
+</Layout>

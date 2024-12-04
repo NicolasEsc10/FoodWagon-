@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import Card from "../../cards/CTACard.astro";
+import pizza from "../../../assets/images/pizza.jpg";
+import sandwich from "../../../assets/images/sandwich.jpg";
+import meat from "../../../assets/images/meat.jpg";
+import CTA from "../../../assets/images/cta-order.jpg"
+import Arrow from "../Arrow.astro";
+---
+
+<section class="w-full bg-white">
+    <div class="flex flex-col items-center gap-8 px-32 py-20">
+        <Card 
+            title={{ first: "Best deals", second: " Crispy Sandwiches" }} 
+            description="Enjoy the large size of sandwiches. Complete perfect slice of sandwiches."
+            buttonText="Proceed to order" 
+            image={sandwich} 
+            alt="sandwich" 
+            imagePosition="right"  
+        />
+        <Card 
+            title={{ first: "Celebrate parties with", second: " Fried Chicken" }} 
+            description="Get the best fried chicken smeared with a lip smacking lemon chili flavor."
+            buttonText="Proceed to order" 
+            image={meat} 
+            alt="meat" 
+            imagePosition="left" 
+        />
+        <Card 
+            title={{ first: "Wanna eat hot & spicy", second: " Pizza?" }} 
+            description="Pair up with a friend and enjoy the hot and crispy pizza pops."
+            buttonText="Proceed to order" 
+            image={pizza} 
+            alt="pizza" 
+            imagePosition="right"  
+        />
+    </div>
+    <div class="relative w-full">
+        <Image src={CTA} alt="cta-order" width="1920" height="400" class="w-full" />
+        
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
+            <h2 class="text-5xl font-extrabold">Are you ready to order with <br> the best deals?</h2>
+            <button class="uppercase font-bold mt-10 group flex justify-center items-center gap-1 bg-gradient-to-br from-[#F17228] to-[#F15E28] text-white px-9 py-2.5 rounded-md hover:px-12 transition-all duration-500 ease-in-out ">
+                Proceed to order <Arrow direction="right" class="size-3 group-hover:ml-2 transition-all duration-200 ease-out" />
+            </button>
+        </div>
+    </div>
+    
+</section>

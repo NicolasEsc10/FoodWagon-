@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import iphone from "../../../assets/images/iphone.png";
+import iphone2 from "../../../assets/images/iphone2.png";
+import google from "../../../assets/images/google-play.png";
+import apple from "../../../assets/images/app-store.png";
+---
+
+<section class="bg-[#FEEFD0] flex justify-center relative items-center">
+
+    <div class="absolute w-full h-[244px] bottom-0">
+        <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 260" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="#FFAE00" offset="0%"></stop><stop stop-color="#FF8A00" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,26L120,60.7C240,95,480,165,720,177.7C960,191,1200,147,1440,117C1680,87,1920,69,2160,78C2400,87,2640,121,2880,125.7C3120,130,3360,104,3600,86.7C3840,69,4080,61,4320,82.3C4560,104,4800,156,5040,156C5280,156,5520,104,5760,104C6000,104,6240,156,6480,160.3C6720,165,6960,121,7200,117C7440,113,7680,147,7920,147.3C8160,147,8400,113,8640,99.7C8880,87,9120,95,9360,104C9600,113,9840,121,10080,108.3C10320,95,10560,61,10800,43.3C11040,26,11280,26,11520,30.3C11760,35,12000,43,12240,52C12480,61,12720,69,12960,86.7C13200,104,13440,130,13680,151.7C13920,173,14160,191,14400,186.3C14640,182,14880,156,15120,130C15360,104,15600,78,15840,73.7C16080,69,16320,87,16560,86.7C16800,87,17040,69,17160,60.7L17280,52L17280,260L17160,260C17040,260,16800,260,16560,260C16320,260,16080,260,15840,260C15600,260,15360,260,15120,260C14880,260,14640,260,14400,260C14160,260,13920,260,13680,260C13440,260,13200,260,12960,260C12720,260,12480,260,12240,260C12000,260,11760,260,11520,260C11280,260,11040,260,10800,260C10560,260,10320,260,10080,260C9840,260,9600,260,9360,260C9120,260,8880,260,8640,260C8400,260,8160,260,7920,260C7680,260,7440,260,7200,260C6960,260,6720,260,6480,260C6240,260,6000,260,5760,260C5520,260,5280,260,5040,260C4800,260,4560,260,4320,260C4080,260,3840,260,3600,260C3360,260,3120,260,2880,260C2640,260,2400,260,2160,260C1920,260,1680,260,1440,260C1200,260,960,260,720,260C480,260,240,260,120,260L0,260Z"></path></svg>
+    </div>
+    <div class="flex items-end relative pl-52">
+        <!-- Segunda imagen (iphone2) que estará detrás -->
+        <div class="w-[250px] h-[350px] overflow-hidden flex items-center justify-center absolute z-0 translate-x-[-200px]">
+          <Image src={iphone2} alt="iphone" width="400" height="600" class="translate-y-[17%]" />
+        </div>
+      
+        <!-- Primera imagen (iphone) que estará al frente -->
+        <div class="w-[280px] h-[450px] overflow-hidden flex items-center justify-center relative z-10">
+          <Image src={iphone} alt="iphone" width="400" height="600" class="translate-y-[12%]" />
+        </div>
+    </div>
+    <div class="pl-24 w-[500px] flex flex-col gap-3 pb-28 z-10">
+        <h2 class="font-extrabold text-6xl bg-gradient-to-br from-[#FFB800] to-[#FF8A00] bg-clip-text text-transparent">Install the app</h2>
+        <p class="w-[320px] text-[#827E7E]">It's never been easier to order food. Look for the finest discounts and you'll be lost in a world of delectable food.</p>
+        <div class="flex gap-2 pt-6">
+            <div class="cursor-pointer">
+                <Image src={google} alt="iphone" width="150" height="150" class="shadow-xl shadow-[#FFAE00]/40 rounded-md" />
+            </div>
+            <div class="cursor-pointer">
+                <Image src={apple} alt="iphone" width="134" height="134" class="shadow-xl shadow-[#FFAE00]/40 rounded-md" />
+            </div>
+        </div>
+    </div>
+</section>
+  

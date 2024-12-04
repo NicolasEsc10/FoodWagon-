@@ -1,0 +1,44 @@
+---
+import ProductCard from './cards/ProductCard.astro';
+---
+
+<div class="flex flex-col jusify-center items-center py-16">
+    <h2 class="font-bold text-4xl text-[#212121] pb-16">Popular items</h2>
+    <div class="flex gap-4 px-32 ">
+        <ProductCard 
+            title="Chees Burger" 
+            location='Burger Arena'
+            price={3.88}
+            imageSrc="/images/products/food-img-5.png" 
+            altText="Chees Burger" 
+        />
+        <ProductCard 
+            title="Toffe’s Cake" 
+            location='Top Sticks'
+            price={4.00}
+            imageSrc="/images/products/food-img-6.png" 
+            altText="Toffe’s Cake" 
+        />
+        <ProductCard 
+            title="Dancake" 
+            location='Cake World'
+            price={1.99}
+            imageSrc="/images/products/food-img-7.png" 
+            altText="Dancake" 
+        />
+        <ProductCard 
+            title="Crispy Sandwich" 
+            location='Fastfood Dine'
+            price={3.00}
+            imageSrc="/images/products/food-img-8.png" 
+            altText="Crispy Sandwich" 
+        />
+        <ProductCard 
+            title="Thai Soup" 
+            location='Foody man'
+            price={2.79}
+            imageSrc="/images/products/food-img-9.png" 
+            altText="Thai Soup" 
+        />
+    </div>
+</div>

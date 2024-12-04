@@ -1,0 +1,92 @@
+---
+import RestaurantCard from './cards/RestaurantCard.astro';
+import Arrow from './ui/Arrow.astro';
+---
+
+<div class="flex flex-col justify-center items-center py-14">
+    <h2 class="font-bold text-4xl text-[#212121] pb-16">Featured Restaurants</h2>
+    
+    <!-- Ajuste de grid para lista de tarjetas con un diseño responsivo progresivo -->
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 gap-y-14 px-4 sm:px-6 lg:px-5 xl:px-32 pb-16">
+        <RestaurantCard 
+            imageSrc="/images/restaurant/res-img-1.png" 
+            imageRes="/images/restaurant/logos/res-logo-1.png"
+            altText="Imagen de ejemplo" 
+            title="Greys Vage" 
+            stars={46}
+            badge="Opens tomorrow" 
+            discount={15}
+        />
+        <RestaurantCard 
+            imageSrc="/images/restaurant/res-img-2.png" 
+            imageRes="/images/restaurant/logos/res-logo-1.png"
+            altText="Imagen de ejemplo" 
+            title="Greys Vage" 
+            stars={40}
+            badge="Opens tomorrow" 
+            discount={15}
+        />
+        <RestaurantCard 
+            imageSrc="/images/restaurant/res-img-3.png" 
+            imageRes="/images/restaurant/logos/res-logo-1.png"
+            altText="Imagen de ejemplo" 
+            title="Greys Vage" 
+            stars={20}
+            badge="Open Now" 
+            discount={15}
+        />
+        <RestaurantCard 
+            imageSrc="/images/restaurant/res-img-4.png" 
+            imageRes="/images/restaurant/logos/res-logo-1.png"
+            altText="Imagen de ejemplo" 
+            title="Greys Vage" 
+            stars={50}
+            badge="Open Now" 
+            discount={15}
+        />
+        <!-- Tarjetas adicionales para completar las 8 -->
+        <RestaurantCard 
+            imageSrc="/images/restaurant/res-img-5.png" 
+            imageRes="/images/restaurant/logos/res-logo-1.png"
+            altText="Imagen de ejemplo" 
+            title="Greys Vage" 
+            stars={30}
+            badge="Open Now" 
+            discount={10}
+        />
+        <RestaurantCard 
+            imageSrc="/images/restaurant/res-img-6.png" 
+            imageRes="/images/restaurant/logos/res-logo-1.png"
+            altText="Imagen de ejemplo" 
+            title="Greys Vage" 
+            stars={25}
+            badge="Open Now" 
+            discount={5}
+        />
+        <RestaurantCard 
+            imageSrc="/images/restaurant/res-img-7.png" 
+            imageRes="/images/restaurant/logos/res-logo-1.png"
+            altText="Imagen de ejemplo" 
+            title="Greys Vage" 
+            stars={35}
+            badge="Closed" 
+            discount={20}
+        />
+        <RestaurantCard 
+            imageSrc="/images/restaurant/res-img-8.png" 
+            imageRes="/images/restaurant/logos/res-logo-1.png"
+            altText="Imagen de ejemplo" 
+            title="Greys Vage" 
+            stars={10}
+            badge="Closed" 
+            discount={0}
+        />
+    </div>
+
+    <div class="flex justify-center">
+        <button class="group flex items-center gap-1 bg-gradient-to-br from-[#FFBA26] to-[#FF9A0E] text-white px-9 py-2.5 rounded-md hover:px-12 transition-all duration-500 ease-in-out shadow-[#FFAE00]/50 shadow-lg hover:shadow-[#FFAE00]/90 ">
+            View All
+            <Arrow direction="right" class="size-3 group-hover:ml-2 transition-all duration-200 ease-out" />
+        </button>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<header>
+  <header
+    class="header-navbar w-full top-0 left-0 right-0 flex flex-row justify-between items-center m-auto gap-3 py-5 px-20 z-10 transition-all duration-600"
+  >
+    <div>
+      <a href="/" class="flex gap-2 transition-all duration-600">
+        <img src="/images/icons/favicon.svg" alt="icon-logo" />
+        <div class="flex text-2xl font-bold">
+          <p class="text-[#F17228]">food</p>
+          <p class="text-[#FFB30E]">waGon</p>
+        </div>
+      </a>
+    </div>
+    <div class="relative flex gap-3 justify-center items-center">
+      <p class="text-[#424242] font-semibold">Deliver to:</p>
+      <div class="flex gap-1 items-center">
+        <img
+          src="/images/icons/location-icon.svg"
+          alt="location-icon"
+          loading="eager"
+          class="size-4"
+        />
+        <p class="text-[#424242]">123 Main St, Anytown, USA</p>
+      </div>
+    </div>
+    <div class="flex gap-5">
+      <div class="flex gap-1 items-center">
+        <img
+          src="/images/icons/search-icon.svg"
+          alt="search-icon"
+          loading="eager"
+          class="size-4"
+        />
+        <p class="text-[#424242] font-semibold">Search Food</p>
+      </div>
+      <button
+        class="font-semibold text-normal rounded-lg py-3 px-4 shadow-orange hover:scale-105 hover:custom-shadow transition-all duration-600 flex items-center gap-2 text-[#FFB800]"
+      >
+        <img
+          src="/images/icons/user-icon.svg"
+          alt="user-icon"
+          loading="eager"
+          class="size-4"
+        />
+        Login
+      </button>
+    </div>
+  </header>
+</header>
+
+<style>
+  .header-navbar {
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(10px);
+    animation: move-and-fade-background linear both;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+  }
+
+  @keyframes move-and-fade-background {
+    to {
+      background-color: #ffffff;
+      padding: 0.7rem 5rem;
+    }
+  }
+</style>
